@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -7,20 +7,9 @@ let package = Package(
     .iOS(.v12)
   ],
   products: [
-    .library(
-      name: "CHIPageControl",
-      targets: ["CHIPageControl"]),
+    .library(name: "CHIPageControl", targets: ["CHIPageControl"]),
   ],
-  dependencies: [],
   targets: [
-    .target(
-      name: "CHIPageControl",
-      dependencies: [],
-      path: "CHIPageControl/",
-      exclude: ["Info.plist"],
-      cSettings: [
-        .headerSearchPath("."),
-      ]
-    ),
+    .target(name: "CHIPageControl")
   ]
-) 
+)
